@@ -1,0 +1,263 @@
+{
+  "basic": [
+    {
+      "command": "git init",
+      "description": {
+        "fr": "Initialise un nouveau dépôt Git",
+        "en": "Initializes a new Git repository"
+      }
+    },
+    {
+      "command": "git clone ['url']",
+      "description": {
+        "fr": "Clone un dépôt distant",
+        "en": "Clones a remote repository"
+      }
+    }
+  ],
+  "branching": [
+    {
+      "command": "git branch",
+      "description": {
+        "fr": "Liste toutes les branches",
+        "en": "Lists all branches"
+      }
+    },
+    {
+      "command": "git checkout ['branch']",
+      "description": {
+        "fr": "Change de branche",
+        "en": "Switches to a branch"
+      }
+    },
+    {
+      "command": "git branch ['branch']",
+      "description": {
+        "fr": "Crée une nouvelle branche",
+        "en": "Creates a new branch"
+      }
+    },
+    {
+      "command": "git branch -d ['branch']",
+      "description": {
+        "fr": "Supprime une branche",
+        "en": "Deletes a branch"
+      }
+    }
+  ],
+  "commit": [
+    {
+      "command": "git add ['file']",
+      "description": {
+        "fr": "Ajoute un fichier à l'index",
+        "en": "Adds a file to the staging area"
+      }
+    },
+    {
+      "command": "git add .",
+      "description": {
+        "fr": "Ajoute tous les fichiers à l'index",
+        "en": "Adds all files to the staging area"
+      }
+    },
+    {
+      "command": "git commit -m ['message']",
+      "description": {
+        "fr": "Crée un nouveau commit",
+        "en": "Creates a new commit"
+      }
+    },
+    {
+      "command": "git commit -am ['message']",
+      "description": {
+        "fr": "Ajoute tous les fichiers modifiés à l'index et crée un nouveau commit",
+        "en": "Adds all modified files to the staging area and creates a new commit"
+      }
+    },
+    {
+      "command": "git commit --amend",
+      "description": {
+        "fr": "Modifie le dernier commit",
+        "en": "Modifies the last commit"
+      }
+    },
+    {
+      "command": "git reset HEAD ['file']",
+      "description": {
+        "fr": "Enlève un fichier de l'index",
+        "en": "Removes a file from the staging area"
+      }
+    },
+    {
+      "command": "git reset HEAD",
+      "description": {
+        "fr": "Enlève tous les fichiers de l'index",
+        "en": "Removes all files from the staging area"
+      }
+    },
+    {
+      "command": "git reset --soft HEAD~1",
+      "description": {
+        "fr": "Annule le dernier commit en gardant les modifications",
+        "en": "Undoes the last commit while keeping the changes"
+      }
+    },
+    {
+      "command": "git reset --hard HEAD~1",
+      "description": {
+        "fr": "Annule le dernier commit en supprimant les modifications",
+        "en": "Undoes the last commit while deleting the changes"
+      }
+    }
+  ],
+  "merging": [
+    {
+      "command": "git merge ['branch']",
+      "description": {
+        "fr": "Fusionne une branche dans la branche courante",
+        "en": "Merges a branch into the current branch"
+      }
+    },
+    {
+      "command": "git merge --abort",
+      "description": {
+        "fr": "Annule la fusion en cours",
+        "en": "Aborts the current merge"
+      }
+    }
+  ],
+  "stashing": [
+    {
+      "command": "git stash",
+      "description": {
+        "fr": "Met de côté les modifications en cours",
+        "en": "Stashes the current changes"
+      }
+    },
+    {
+      "command": "git stash pop",
+      "description": {
+        "fr": "Applique les modifications mises de côté",
+        "en": "Applies the stashed changes"
+      }
+    },
+    {
+      "command": "git stash list",
+      "description": {
+        "fr": "Liste les modifications mises de côté",
+        "en": "Lists the stashed changes"
+      }
+    },
+    {
+      "command": "git stash drop",
+      "description": {
+        "fr": "Supprime les modifications mises de côté",
+        "en": "Deletes the stashed changes"
+      }
+    }
+  ],
+  "remote": [
+    {
+      "command": "git remote add ['name'] ['url']",
+      "description": {
+        "fr": "Ajoute un dépôt distant",
+        "en": "Adds a remote repository"
+      }
+    },
+    {
+      "command": "git remote -v",
+      "description": {
+        "fr": "Liste les dépôts distants",
+        "en": "Lists the remote repositories"
+      }
+    },
+    {
+      "command": "git remote rm ['name']",
+      "description": {
+        "fr": "Supprime un dépôt distant",
+        "en": "Deletes a remote repository"
+      }
+    },
+    {
+      "command": "git fetch ['remote']",
+      "description": {
+        "fr": "Récupère les modifications distantes",
+        "en": "Fetches the remote changes"
+      }
+    },
+    {
+      "command": "git pull ['remote'] ['branch']",
+      "description": {
+        "fr": "Récupère et fusionne les modifications distantes",
+        "en": "Fetches and merges the remote changes"
+      }
+    },
+    {
+      "command": "git push ['remote'] ['branch']",
+      "description": {
+        "fr": "Pousse les modifications locales vers le dépôt distant",
+        "en": "Pushes the local changes to the remote repository"
+      }
+    }
+  ],
+  "log": [
+    {
+      "command": "git log",
+      "description": {
+        "fr": "Liste les commits",
+        "en": "Lists the commits"
+      }
+    },
+    {
+      "command": "git log --oneline",
+      "description": {
+        "fr": "Liste les commits sur une ligne",
+        "en": "Lists the commits on one line"
+      }
+    },
+    {
+      "command": "git log --graph",
+      "description": {
+        "fr": "Liste les commits sur une ligne avec les branches",
+        "en": "Lists the commits on one line with the branches"
+      }
+    },
+    {
+      "command": "git log --graph --oneline",
+      "description": {
+        "fr": "Liste les commits sur une ligne avec les branches",
+        "en": "Lists the commits on one line with the branches"
+      }
+    },
+    {
+      "command": "git log --graph --oneline --all",
+      "description": {
+        "fr": "Liste les commits sur une ligne avec les branches et les dépôts distants",
+        "en": "Lists the commits on one line with the branches and the remote repositories"
+      }
+    }
+  ],
+  "update": [
+    {
+      "command": "git fetch",
+      "description": {
+        "fr": "Récupère les modifications distantes",
+        "en": "Fetches the remote changes"
+      }
+    },
+    {
+      "command": "git pull",
+      "description": {
+        "fr": "Récupère et fusionne les modifications distantes",
+        "en": "Fetches and merges the remote changes"
+      }
+    },
+    {
+      "command": "git pull --rebase",
+      "description": {
+        "fr": "Récupère et fusionne les modifications distantes en réappliquant les commits locaux",
+        "en": "Fetches and merges the remote changes while rebasing the local commits"
+      }
+    }
+  ]
+}
