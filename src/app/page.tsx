@@ -4,16 +4,29 @@ import React, { useState } from "react";
 import gitCommands from "./gitCommands.json";
 import NavBar from "./components/nav";
 
+interface Command {
+  command: string;
+  description: { fr: string; en: string };
+}
+
+interface NavBarProps {
+  language: string;
+  setLanguage: React.Dispatch<React.SetStateAction<string>>;
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+  gitCommands: { [key: string]: Command[] };
+  setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
 function App() {
-  const [language, setLanguage] = useState("fr");
+  const [language, setLanguage] = useState("en");
   const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const normalizedSearch = search
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
-
-  const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
     <div>
@@ -27,8 +40,8 @@ function App() {
           setSelectedCategory={setSelectedCategory}
         />
 
-        <div className="mx-auto ml-96 flex max-w-full flex-wrap items-start justify-around rounded-xl bg-white p-6 shadow-md">
-          <h1 className="w-full text-center text-xl font-bold">
+        <div className="mx-auto ml-96 max-w-full p-6">
+          <h1 className="mb-8 text-center text-xl font-bold">
             Learn Git commands
           </h1>
           {Object.entries(gitCommands)
@@ -37,26 +50,23 @@ function App() {
                 !selectedCategory || category === selectedCategory,
             )
             .map(([category, commands]) => (
-              <div
-                key={category}
-                className="m-2 flex w-64 flex-col rounded bg-gray-200 p-4 shadow-lg"
-              >
-                <h2 className="mb-2 text-lg font-semibold">{category}</h2>
+              <div key={category} className="mb-8">
+                <h2 className="mb-4 text-lg font-semibold">{category}</h2>
                 {commands
                   .filter(
                     (cmd) =>
                       cmd.command.toLowerCase().includes(normalizedSearch) ||
-                      cmd.description[language]
+                      cmd.description[language as "fr" | "en"]
                         .normalize("NFD")
                         .replace(/[\u0300-\u036f]/g, "")
                         .toLowerCase()
                         .includes(normalizedSearch),
                   )
                   .map((cmd, index) => (
-                    <div key={index}>
+                    <div key={index} className="mb-4">
                       <h3 className="text-md font-semibold">{cmd.command}</h3>
                       <p className="text-gray-800">
-                        {cmd.description[language]}
+                        {cmd.description[language as "fr" | "en"]}
                       </p>
                     </div>
                   ))}
