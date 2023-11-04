@@ -1,12 +1,17 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 
+interface Command {
+  command: string;
+  description: { fr: string; en: string };
+}
+
 interface NavBarProps {
   language: string;
-  setLanguage: Dispatch<SetStateAction<string>>;
+  setLanguage: React.Dispatch<React.SetStateAction<string>>;
   search: string;
-  setSearch: Dispatch<SetStateAction<string>>;
-  gitCommands: { [key: string]: string[] };
-  setSelectedCategory: Dispatch<SetStateAction<string | null>>;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+  gitCommands: { [key: string]: Command[] };
+  setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 const NavBar = ({
