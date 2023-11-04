@@ -1,21 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import gitCommands from "./gitCommands.json";
+import gitCommands from "../../public/gitCommands.json";
 import NavBar from "./components/nav";
 
 interface Command {
   command: string;
   description: { fr: string; en: string };
-}
-
-interface NavBarProps {
-  language: string;
-  setLanguage: React.Dispatch<React.SetStateAction<string>>;
-  search: string;
-  setSearch: React.Dispatch<React.SetStateAction<string>>;
-  gitCommands: { [key: string]: Command[] };
-  setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 function App() {
