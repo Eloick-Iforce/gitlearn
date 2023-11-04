@@ -51,6 +51,12 @@ const NavBar = ({
             className="mb-4 w-full rounded border bg-red-500 p-2 placeholder:text-gray-100"
           />
           <div className="flex flex-col items-start gap-8">
+            <button
+              className="mt-2 text-2xl text-white"
+              onClick={() => setSelectedCategory(null)}
+            >
+              All
+            </button>
             {Object.keys(gitCommands).map((category) => (
               <button
                 key={category}
