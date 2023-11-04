@@ -10,7 +10,7 @@ interface NavBarProps {
   setLanguage: React.Dispatch<React.SetStateAction<string>>;
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
-  gitCommands: { [key: string]: Command[] };
+  gitCommands: Record<string, Command[]>;
   setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
