@@ -1,3 +1,14 @@
+import { Dispatch, SetStateAction } from "react";
+
+interface NavBarProps {
+  language: string;
+  setLanguage: Dispatch<SetStateAction<string>>;
+  search: string;
+  setSearch: Dispatch<SetStateAction<string>>;
+  gitCommands: { [key: string]: string[] };
+  setSelectedCategory: Dispatch<SetStateAction<string | null>>;
+}
+
 const NavBar = ({
   language,
   setLanguage,
@@ -5,7 +16,7 @@ const NavBar = ({
   setSearch,
   gitCommands,
   setSelectedCategory,
-}) => {
+}: NavBarProps) => {
   return (
     <div className="fixed min-h-screen w-96 bg-red-500 p-8">
       <select
