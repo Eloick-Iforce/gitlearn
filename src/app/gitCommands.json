@@ -1,5 +1,5 @@
 {
-  "basic": [
+  "Basic": [
     {
       "command": "git init",
       "description": {
@@ -15,7 +15,7 @@
       }
     }
   ],
-  "branching": [
+  "Branch": [
     {
       "command": "git branch",
       "description": {
@@ -45,7 +45,7 @@
       }
     }
   ],
-  "commit": [
+  "Commit": [
     {
       "command": "git add ['file']",
       "description": {
@@ -110,7 +110,7 @@
       }
     }
   ],
-  "merging": [
+  "Merging": [
     {
       "command": "git merge ['branch']",
       "description": {
@@ -126,7 +126,7 @@
       }
     }
   ],
-  "stashing": [
+  "Stashing": [
     {
       "command": "git stash",
       "description": {
@@ -156,7 +156,7 @@
       }
     }
   ],
-  "remote": [
+  "Remote": [
     {
       "command": "git remote add ['name'] ['url']",
       "description": {
@@ -200,7 +200,7 @@
       }
     }
   ],
-  "log": [
+  "Log": [
     {
       "command": "git log",
       "description": {
@@ -237,7 +237,7 @@
       }
     }
   ],
-  "update": [
+  "Update": [
     {
       "command": "git fetch",
       "description": {
